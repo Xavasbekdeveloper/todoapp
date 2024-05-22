@@ -26,23 +26,7 @@ const TodoManage = ({ data, deleteTodo, updateValue }) => {
   return (
     <Fragment>
       <h2 className="todo__list__title">Total: {total}</h2>
-      <ul className="todo__list">
-        <li className="todo__item">
-          <b>salom</b>
-          <span>salom</span>
-          <span>must</span>
-          <span>10:55:22</span>
-          <div className="todo__list__btns">
-            <button>
-              <FaEdit className="todo__list__edit-btn" />
-            </button>
-            <button>
-              <RiDeleteBin6Fill className="todo__list__delete-btn" />
-            </button>
-          </div>
-        </li>
-        {todoItem}
-      </ul>
+      <ul className="todo__list">{todoItem}</ul>
     </Fragment>
   );
 };

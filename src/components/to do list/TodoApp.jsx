@@ -1,4 +1,4 @@
-import React, { Fragment, memo, useCallback, useState } from "react";
+import React, { Fragment, memo, useCallback, useState, useEffect } from "react";
 import TodoCreate from "./TodoCreate";
 import TodoManage from "./TodoManage";
 
@@ -42,8 +42,11 @@ const TodoApp = () => {
   let updateTodo = useCallback(
     (payload) => {
       let index = data?.findIndex((el) => el.id === payload.id);
-      data?.splice(index, 1, payload);
-      setData(data);
+      if (index !== -1) {
+        const updatedData = [...data];
+        updatedData.splice(index, 1, payload);
+        setData(updatedData);
+      }
       setFormData(initialState);
     },
     [data]
