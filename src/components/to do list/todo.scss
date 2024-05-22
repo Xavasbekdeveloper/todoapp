@@ -1,0 +1,87 @@
+.todo {
+    padding: 50px 0;
+
+    &__title {
+        text-align: center;
+        font-size: 35px;
+        margin-bottom: 20px;
+    }
+
+    &__form {
+        width: 500px;
+        margin: 0 auto;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 30px;
+
+        input, select, button {
+            padding: 8px 10px;
+            border: none;
+            outline: none;
+            border-radius: 6px;
+            font-size: 14px;
+            color: gray;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+        }
+    }
+
+    &__list {
+        width: 500px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        &__title {
+            text-align: center;
+            margin-bottom: 10px;    
+        }
+
+        &__btns {
+            display: flex;
+            align-content: inherit;
+            gap: 10px;
+        }
+
+        &__edit-btn {
+            color: blue;
+        }
+
+        &__delete-btn {
+            color: red;
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+
+        button {
+            background-color: transparent;
+            border: none;
+
+            svg {
+                width: 18px;
+                height: 25px;
+            }
+
+        }
+    }
+}
+
+@media (max-width: 540px) {
+    .todo {
+        &__form, &__list {
+            width: 95%;
+        }
+    }
+}
